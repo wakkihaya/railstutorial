@@ -1,0 +1,24 @@
+<!--application.htmlは全体のページに共通するhtmlである。このhtmlと他のhtmlが融合されてページが作成される-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> <%= full_title(yield(:title)) %> </title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= render 'layouts/shim' %>
+  </head>
+
+  <body>
+   <%= render 'layouts/header'  %>
+
+   <div class="container">
+     <%= yield %>
+     <%= render 'layouts/footer' %>
+
+   </div>
+  </body>
+</html>
