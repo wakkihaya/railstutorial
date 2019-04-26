@@ -68,6 +68,16 @@ footer {
   border-top: 1px solid #eaeaea;
   color: #777;
 }
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  //@include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
 
 footer a {
   color: #555;

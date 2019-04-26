@@ -1,3 +1,5 @@
+# User情報に関すること、例えばログイン失敗の事などはmodelに書き込むのが良い
+
 class User < ApplicationRecord
   validates :name, presence: true, length: {maximum:50}
   before_save [self.email = email.downcase]
